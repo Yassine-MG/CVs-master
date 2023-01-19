@@ -1,0 +1,382 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;;
+}
+:root{
+    --color-1:#a49969;
+    --color-2: #434343;
+    --color-3:#2d3f50;
+    --color-4:#5a6976;
+}
+@media only print{
+    .content-white h2{
+        font-size: 18px !important;
+    }
+    .Typewriter__cursor{
+        display: none;
+    }
+    .Typewriter__wrapper{
+        content: "developper web" !important;
+    }
+    .content-white h2 i{
+        font-size: 14px;
+        padding: 5px;
+    }
+    #app{
+        display: none;
+    }
+    .title-h2{
+        display: block !important;
+    }
+    .parcours-1{
+        margin-top: 0px !important;
+    }
+    .about{
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .about h2 span{
+        text-decoration:none ;
+    }
+    .content-white h2{
+        text-decoration: underline var(--color-3) 1px !important; 
+    }
+    .progress-bar{
+        color:black !important;
+    }
+}
+.title-h2{
+    display: none;
+}
+.container{
+    max-width: 21cm;
+    background-color: white;
+    padding: 0;
+}
+body{
+     background-image: url(./img/pexels-scott-webb-2117938.jpg);
+     background-size: cover;
+}
+/* header */
+.content{
+    width: 100%;
+    height: 5vh;
+    background-color: var(--color-1);
+}
+header{
+    display: flex;
+    background: linear-gradient(to right,#434343, #000000);
+}
+header img{
+    width: 100%;
+}
+.img{
+    flex-basis: 20%;
+}
+header .title{
+    flex-basis: 80%;
+    color: var(--color-1);
+    text-align: center;
+    margin-top: 40px;
+}
+header h1{
+    font-size: 30px;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+header h2{
+    font-size: 20px ;
+    font-weight: 200;
+    letter-spacing: 3px;
+}
+@media screen and (max-width: 750px){
+    header{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    header .img{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .img img{
+        width: 20%;
+        border-radius: 50%;
+        border: solid var(--color-1) 5px;
+        margin-top: 20px;
+    }
+    header .title{
+        margin-top: 10px;
+    }
+    header h1{
+        font-size: 18px;
+    }
+    header h2{
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+    .content{
+        display: none;
+    }
+    .progress-bars{
+        text-align: left;
+    }
+}
+@media screen and (max-width: 390px){
+    header h1{
+        font-size: 16px;
+    }
+    header h2{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 320px){
+    header h1{
+        font-size: 16px;
+    }
+    header h2{
+        font-size: 12px;
+    }
+}
+/* Main */
+main{
+    display: flex;
+}
+/* content black */
+.content-black{
+    flex-basis: 30%;
+    background: linear-gradient(to top, #000000, #434343);
+}
+.info{
+    margin-bottom: 30px;
+}
+.info h2{
+    color: var(--color-1);
+    font-size: 25px ;
+    display: inline-block;
+    font-weight: 300;
+    padding: 6px 50px;
+    background: linear-gradient(to left, #16222a, #3a6073);
+    border-radius: 0 30px 30px 0px;
+    margin-top: 30px;
+}
+.display{
+    color: var(--color-1);
+    margin: 0px 20px;
+}
+.display h3{
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+}
+.display div{
+    padding: 0 10px;
+}
+.display p{
+    font-size: 15px;
+}
+.display i{
+    font-size: 25px;
+    margin-top: 5px;
+}
+.display a{
+    color: var(--color-1);
+    text-decoration: none;
+}
+.progress-bars span{
+    color: var(--color-1);
+}
+.progress-bars{
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.deuxieme-titre{
+    background-color: #2d3f50;
+}
+.progress-bar{
+    background-color: var(--color-1);
+}
+/* content-white */
+.content-white{
+    flex-basis: 70%;
+}
+.about{
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+.about h2{
+    background: linear-gradient(to right,#404040, #000000);
+    color: var(--color-1);
+    display: inline-block;
+    padding: 6px 50px;
+    border-radius: 0 30px 30px 0px;
+    font-weight: 200;
+    font-size: 25px ;
+}
+.about>div{
+    padding: 0 20px;
+}
+.about p{
+    text-align: justify;
+    font-size: 14px;
+    padding: 20px 0px;
+    color: var(--color-4);
+    margin: 0;
+}
+@media screen and (max-width: 750px){
+    main{
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+    .content-white{
+        flex-basis: 100%;
+    }
+    .info>h2{
+        border-radius: 30px;
+    }
+    .content-black{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .info-content{
+        display: flex;
+        justify-content: center;
+        text-align: left;
+    }
+    .parcours h2{
+        font-size: 19px;
+        background: linear-gradient(to right,#404040, #000000) ;
+    }
+    .progress-bars{
+        text-align: left;
+    }
+    .about h2{
+        display: block;
+        padding: 6px 50px;
+        border-radius: 0 ;
+        text-align: center;
+        font-weight: 200;
+        background: linear-gradient(to right,#404040, #000000);
+    }
+    .content-black{
+        background: linear-gradient(to right,#404040, #000000)
+    }
+}
+@media screen and (max-width: 500px){
+    .info-content{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: left;
+    }
+    .info-content>div{
+        flex-basis: 100%;
+        margin-left: 10px;
+    }
+    .about p{
+        margin-bottom: 0;
+    }
+}
+.parcours-1{
+    margin-top: 0px;
+}
+.parcours h2{
+    background: linear-gradient(to right,#303030, #000000);
+    color: var(--color-1);
+    display: inline-block;
+    padding: 6px 50px;
+    border-radius: 0 30px 30px 0px;
+    font-weight: 200;
+    font-size: 25px;
+}
+.parcours-1 h2{
+    background: linear-gradient(to right,#1c1c1c, #000000);
+}
+.parcours-2 h2{
+    background: linear-gradient(to right,#0e0e0e, #000000);
+}
+.parcours i{
+    font-size: 20px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+.parcours p{
+    font-size: 15px;
+    margin: 15px 30px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: var(--color-4);
+}
+.parcours ul{
+    list-style:circle;
+}
+.parcours li{
+    padding: 5px 0;
+    font-size: 14px;
+    color: var(--color-4);
+    font-weight: 500;
+}
+.progress{
+    border: #2d3f50 1px solid;
+    background-color: #000000;
+    border-radius: 0px;
+}
+.progress-bar{
+    color: var(--color-1);
+}
+@media screen and (max-width: 750px){
+    .parcours h2{
+        display: block;
+        border-radius: 0;
+        text-align: center;
+    }
+    .Footer{
+        display: none;
+    }
+    .progress-bars{
+        margin-left: 110px;
+    }
+    .parcours h2{
+        background: linear-gradient(to right,#404040, #000000)
+    }
+    .parcours-1 h2{
+        background: linear-gradient(to right,#404040, #000000)
+    }
+    .parcours-2 h2{
+        background: linear-gradient(to right,#404040, #000000)
+    }
+}
+@media screen and (max-width: 500px){
+    .parcours{
+        margin: 0px;
+        text-align: justify;
+    }
+    .parcours ul{
+        list-style: none;
+        padding: 10px ;
+    }
+    .parcours p{
+        margin: 15px 10px;
+        font-size: 15px;
+    }
+    .parcours li{
+        font-size: 13px;
+    }
+    .parcours h2{
+        font-size: 18px;
+    }
+    .progress-bars{
+        margin-left: 30px;
+    }
+}
+.Footer{
+    width: 100%;
+    height: 5vh;
+    background-color: var(--color-3);
+}
+
+
+
+
